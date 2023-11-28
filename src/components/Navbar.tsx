@@ -163,7 +163,7 @@ function Navbar() {
 	return (
 		<div className='fixed w-full backdrop-blur-3xl border-b border-slate-900/10 z-50'>
 			<div className='container h-[72px] flex items-center justify-between'>
-				<motion.div animate={{ x: 0 }} initial={{ x: -100 }}>
+				<motion.div animate={{ x: 0, opacity: 1 }} initial={{ x: -80, opacity: 0 }}>
 					<Link href={'/'}>
 						<Image
 							src={logoCSD}
@@ -174,7 +174,7 @@ function Navbar() {
 						/>
 					</Link>
 				</motion.div>
-				<nav className='ml-10 w-full flex items-center justify-between'>
+				<motion.nav className='ml-10 w-full flex items-center justify-between' animate={{ x: 0, opacity: 1 }} initial={{ x: 80, opacity: 0 }}>
 					<ul className='flex items-center justify-start'>
 						{menu.map((item) => {
 							return (
@@ -221,7 +221,7 @@ function Navbar() {
 							<Link href={'https://facebook.com/CSD.Vie'} target='_blank'><Button className='uppercase bg-clrPrimary-900 hover:bg-clrPrimary-800'>Contact</Button></Link>
 						</div>
 					</div>
-				</nav>
+				</motion.nav>
 			</div>
 		</div>
 	);

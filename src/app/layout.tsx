@@ -1,16 +1,12 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import localFont from 'next/font/local';
+import { Outfit } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import SocialFloatButton from '@/components/SocialFloatButton';
 import ButtonScroolToTop from '@/components/ButtonScroolToTop';
 
-const inter = Inter({ subsets: ['latin'] });
-const myFont = localFont({
-  src: '../assets/font/Inter/Inter-VariableFont_slnt,wght.ttf',
-});
+const font = Outfit({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'CSD Vietnam',
@@ -24,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={myFont.className}>
+      <body className={font.className}>
         <header className='z-50'>
           <Navbar />
         </header>
