@@ -9,6 +9,7 @@ import HowDoWeWork from '@/components/home/HowDoWeWork';
 import LastNews from '@/components/home/LastNews';
 import SocialFloatButton from '@/components/SocialFloatButton';
 
+
 export default function Home() {
   return (
     <div className='page container'>
