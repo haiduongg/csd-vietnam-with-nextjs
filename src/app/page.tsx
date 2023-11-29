@@ -9,15 +9,28 @@ import HowDoWeWork from '@/components/home/HowDoWeWork';
 import LastNews from '@/components/home/LastNews';
 import SocialFloatButton from '@/components/SocialFloatButton';
 
+async function getProjectsData() {
+  try {
+    const res = await fetch(`https://api-csd-vietnam.onrender.com/projects`);
+    if (!res.ok) {
+      throw new Error('Failed to fetch data');
+    }
+    return res.json();
+  } catch (err) {
+    console.log(err);
+  }
+}
 
-export default function Home() {
+export default async function HomePage() {
+  const dataProjects = await getProjectsData();
+
   return (
     <div className='page container'>
       <section className='pt-[50px] lg:pt-[100px]'>
         <Hero />
       </section>
       <section>
-        <PopularProjects />
+        <PopularProjects data={dataProjects} />
       </section>
       <section>
         <WhyChooseCSD />

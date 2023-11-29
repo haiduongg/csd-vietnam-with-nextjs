@@ -19,7 +19,7 @@ function Footer() {
 		<div className='bg-text dark:bg-gray-800 dark:border-t-2 dark:border-solid dark:border-gray-500'>
 			<div className='container py-16'>
 				<Link href={'/'} title='CSD Vietnam' className='block w-fit'>
-					<Image src={whiteLogoCSD} alt='CSD Vietnam' width={150} height={5} />
+					<Image src={whiteLogoCSD} alt='CSD Vietnam' width={150} />
 				</Link>
 				<div className='mt-8 grid grid-cols-3 xl:grid-cols-3'>
 					<div className='col-span-3 lg:col-span-2'>

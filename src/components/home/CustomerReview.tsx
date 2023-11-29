@@ -168,8 +168,6 @@ const SliderReview = (props: { dataSlide: { id: number, name: string, avatar: St
 				delay: 2200,
 				disableOnInteraction: false,
 			}}
-			onSlideChange={() => console.log('slide change')}
-			onSwiper={(swiper) => console.log(swiper)}
 		>
 			{props.dataSlide.map((review, index) => (
 				<SwiperSlide key={index}>
