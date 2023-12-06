@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply dark:bg-dark dark:text-white bg-white text-dark;
+  }
+}
+
 html {
   font-size: 100%;
   overflow-x: hidden;

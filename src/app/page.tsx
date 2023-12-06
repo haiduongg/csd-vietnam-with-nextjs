@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import Hero from '@/components/Hero';
+import Hero from '@/components/home/Hero';
 import PopularProjects from '@/components/home/PopularProjects';
 import ButtonScroolToTop from '@/components/ButtonScroolToTop';
 import WhyChooseCSD from '@/components/home/WhyChooseCSD';

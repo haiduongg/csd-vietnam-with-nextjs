@@ -13,7 +13,7 @@ import dollar from '@/assets/gif/dollar.gif';
 
 const ReasonCard = (props: { data: { icon: StaticImageData, title: string, description: string } }) => {
 	return (
-		<div className='group p-4 border-[1px] border-solid border-gray-300 rounded-xl hover:border-text dark:hover:border-primary hover:shadow-xl duration-300'>
+		<div className='p-4 border-[1px] dark:border-gray-500 border-solid border-gray-300 rounded-xl hover:border-text dark:hover:border-primary hover:shadow-xl duration-300'>
 			<Image
 				src={props.data.icon}
 				alt={props.data.title}
@@ -22,7 +22,7 @@ const ReasonCard = (props: { data: { icon: StaticImageData, title: string, descr
 				className='mx-auto my-6'
 			/>
 			<p className='text-center font-bold'>{props.data.title}</p>
-			<p className='mt-2 text-sm leading-normal group-hover:text-text dark:group-hover:text-primary-900 opacity-80 text-center'>
+			<p className='mt-2 text-sm leading-normal dark:group-hover:text-primary-900 opacity-80 text-center'>
 				{props.data.description}
 			</p>
 		</div>

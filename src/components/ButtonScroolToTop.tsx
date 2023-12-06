@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { Button } from './ui/button';
 import { FaArrowUp } from 'react-icons/fa';
 
@@ -20,15 +21,17 @@ function ButtonScroolToTop() {
 	}, [])
 
 	return (
-		<Button
-			type='button'
-			onClick={() => {
-				window.scrollTo(0, 0);
-			}}
-			className={`${show ? 'block' : 'hidden'} duration-300 bg-clrPrimary-900 hover:bg-clrPrimary-800`}
-		>
-			<FaArrowUp />
-		</Button>
+		<motion.div whileHover={{ scale: 0.95 }} whileTap={{ scale: 0.90 }}>
+			<Button
+				variant={'outline'}
+				onClick={() => {
+					window.scrollTo(0, 0);
+				}}
+				className={`${show ? 'block' : 'hidden'} duration-300 px-8 py-2`}
+			>
+				<FaArrowUp />
+			</Button>
+		</motion.div>
 	);
 }
 
